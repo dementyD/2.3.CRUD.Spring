@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Users</title>
+</head>
+<body>
+
+<a href="new.html"
+   th:href="@{http://localhost:8080/users/new}">Add User
+</a>
+
+<br>
+<br>
+
+<div>
+    <table border="1" bordercolor="black">
+        <tr>
+            <th>Name</th>
+            <th>Age</th>
+            <th>Email</th>
+            <th>Update</th>
+            <th>Remove</th>
+        </tr>
+        <tr th:each="element : ${users}">
+            <td th:utext="${element.name}"></td>
+            <td th:utext="${element.age}"></td>
+            <td th:utext="${element.email}"></td>
+            <td>
+                <button><a href="edit.html"
+                           th:href="'/users/'+ ${element.id}+'/edit'">Edit
+                </a></button>
+            </td>
+            <td>
+                <button><a href="delete.html"
+                           th:href="'/users/'+ ${element.id}+'/delete'">Delete
+                </a></button>
+            </td>
+        </tr>
+    </table>
+</div>
+
+</body>
+</html>
+
+
+<!--<td><span th:text="${element.endDate}"></span> <input type="button" value="Edit"  alt="Submit" class="deleteTaskBtn"> </td>-->
+<!--<td><span th:text="${element.endDate}"></span> <input type="button" value="Delete"  alt="Submit" class="deleteTaskBtn"> </td>-->
+
+
+<!--<td <button type="submit" class="btn btn-success">Edit</button> </td>-->
+<!--<td input type="submit" value="Remove"></td>-->
