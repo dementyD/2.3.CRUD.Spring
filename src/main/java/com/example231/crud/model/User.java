@@ -20,20 +20,40 @@ public class User {
         this.email = email;
     }
 
-    public User(){
+    public User() {
 
     }
 
-    public void setId(Long id) {this.id = id;}
-    public Long getId(){return id;}
+    public void setId(Long id) {
+        this.id = id;
+    }
 
-    public void setName(String name) {this.name = name;}
-    public String getName() {return name;}
+    public Long getId() {
+        return id;
+    }
 
-    public void setAge(String age) {this.age = age;}
-    public String getAge() {return age;}
+    public void setName(String name) {
+        this.name = name;
+    }
 
-    public void setEmail(String email) {this.email = email;}
-    public String getEmail() {return email;}
+    public String getName() {
+        return name;
+    }
+
+    public void setAge(String age) {
+        this.age = age;
+    }
+
+    public String getAge() {
+        return age;
+    }
+
+    public void setEmail(String email) {
+        this.email = email;
+    }
+
+    public String getEmail() {
+        return email;
+    }
 
 }
