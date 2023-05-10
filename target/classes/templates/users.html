@@ -6,9 +6,7 @@
 </head>
 <body>
 
-<a href="new.html"
-   th:href="@{http://localhost:8080/users/new}">Add User
-</a>
+<a th:href="@{http://localhost:8080/users/new}">Add User</a>
 
 <br>
 <br>
@@ -27,14 +25,10 @@
             <td th:utext="${element.age}"></td>
             <td th:utext="${element.email}"></td>
             <td>
-                <button><a href="edit.html"
-                           th:href="'/users/'+ ${element.id}+'/edit'">Edit
-                </a></button>
+                <button><a th:href="'/users/'+ ${element.id}+'/edit'">Edit</a></button>
             </td>
             <td>
-                <button><a href="delete.html"
-                           th:href="'/users/'+ ${element.id}+'/delete'">Delete
-                </a></button>
+                <button><a th:href="'/users/'+ ${element.id}+'/delete'">Delete</a></button>
             </td>
         </tr>
     </table>
@@ -42,11 +36,3 @@
 
 </body>
 </html>
-
-
-<!--<td><span th:text="${element.endDate}"></span> <input type="button" value="Edit"  alt="Submit" class="deleteTaskBtn"> </td>-->
-<!--<td><span th:text="${element.endDate}"></span> <input type="button" value="Delete"  alt="Submit" class="deleteTaskBtn"> </td>-->
-
-
-<!--<td <button type="submit" class="btn btn-success">Edit</button> </td>-->
-<!--<td input type="submit" value="Remove"></td>-->
